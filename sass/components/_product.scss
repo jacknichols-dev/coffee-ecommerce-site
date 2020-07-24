@@ -1,0 +1,66 @@
+.product {
+  width: 80%;
+  margin: 8rem auto 0 auto;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+
+  @include respond(tab) {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__images {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    & img {
+      border: 1px solid $ter;
+      padding: 1rem 7rem;
+
+      @include respond(laptop) {
+        padding: 1rem 4rem;
+      }
+    }
+  }
+
+  &__info {
+    width: 50%;
+    position: relative;
+    color: $pri;
+    margin: 8rem 0 8rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &--title {
+      width: 20rem;
+      position: relative;
+      color: lighten($pri, 30%);
+      left: 4rem;
+      transform: none;
+    }
+
+    & p {
+      border-bottom: 1px solid $ter;
+      padding: 3rem 0;
+      width: 85%;
+
+      @include respond(tab) {
+        width: 100%;
+      }
+    }
+
+    &--price {
+      width: 9rem;
+      position: relative;
+      color: lighten($pri, 30%);
+      padding: 2rem 0;
+      left: 4rem;
+      transform: none;
+    }
+  }
+}

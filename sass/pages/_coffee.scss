@@ -1,5 +1,38 @@
 //coffee
 
 .coffee {
-  min-height: 150vh;
+  min-height: 100vh;
+  width: 100vw;
+  top: 0;
+
+  &__header {
+    height: 23rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    background-color: $pri;
+    margin-top: 6rem;
+    animation: productTitleReveal 1s ease;
+
+    @include respond(tab) {
+      margin-top: 5rem;
+      height: 18rem;
+    }
+  }
+}
+
+.page-title {
+  font-size: 6rem;
+  color: $sec;
+  text-shadow: none;
+  max-width: 100%;
+
+  @include respond(tab) {
+    font-size: 4rem;
+  }
+
+  &:before,
+  &:after {
+    background-color: $sec;
+  }
 }
