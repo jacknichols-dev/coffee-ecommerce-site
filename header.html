@@ -1,0 +1,79 @@
+<!--navigation-->
+<header>
+  <nav class="nav">
+    <div class="nav__logo">
+      <a href="index.html" class="nav__logo--link">
+        <picture class="footer__logo">
+          <source
+            srcset="/assets/logos/coffeetime-logo.svg"
+            media="(min-width: 30em)"
+          />
+          <img
+            alt="logo"
+            srcset="/assets/logos/coffeetime-logo-icon.svg"
+            src="/assets/logos/coffeetime-logo-icon.svg"
+          />
+        </picture>
+      </a>
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#" class="nav__link">Products <span></span></a>
+        <ul class="nav__list--sublist">
+          <li class="nav__item--subitem">
+            <a href="coffee.html" class="nav__item--sublink">Coffee</a>
+          </li>
+          <li class="nav__item--subitem">
+            <a href="#" class="nav__item--sublink">Machines</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+    </ul>
+    <div class="nav__bg"></div>
+    <div class="nav__icons">
+      <img
+        src="/assets/icons/search.svg"
+        alt="search icon"
+        class="nav__icons--search"
+      />
+      <div class="nav__icons--bag">
+        <img src="/assets/icons/cart.svg" alt="bag icon" />
+        <span><small>0</small></span>
+      </div>
+    </div>
+  </nav>
+
+  <!--mobile nav-->
+  <div class="mobnav">
+    <input type="checkbox" class="mobnav__checkbox" id="mobnav__toggle" />
+    <label for="mobnav__toggle" class="mobnav__button">
+      <span class="mobnav__icon"></span>
+    </label>
+    <div class="mobnav__background"></div>
+
+    <nav class="mobnav__nav">
+      <ul class="mobnav__list">
+        <li class="mobnav__item">
+          <label for="drop-1" class="mobnav__item--toggle">
+            <span class="minus"></span>
+            Products
+          </label>
+          <input type="checkbox" class="mobnav__toggle" id="drop-1" />
+          <!-- sub list -->
+          <ul class="mobnav__sublist">
+            <li class="mobnav__subitem">
+              <a href="coffee.html">Coffee</a>
+            </li>
+            <li class="mobnav__subitem">
+              <a href="#">Machines</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobnav__item"><a href="#">About</a></li>
+        <li class="mobnav__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,40 @@
+.section-title {
+  position: absolute;
+  text-shadow: 0 0.3rem 0.5rem rgba(white, 0.6);
+  left: 50%;
+  transform: translateX(-50%);
+  color: $dark;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+    content: "";
+    height: 2px;
+    width: 3rem;
+    background-color: $dark;
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: -4rem;
+    content: "";
+    height: 2px;
+    width: 3rem;
+    background-color: $dark;
+  }
+}
+
+.footer__title {
+  color: $sec;
+  text-shadow: none;
+  margin-top: 5rem;
+
+  &:before {
+    background-color: $sec;
+  }
+  &:after {
+    background-color: $sec;
+  }
+}

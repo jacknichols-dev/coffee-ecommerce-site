@@ -1,0 +1,480 @@
+.minus {
+  height: 2px;
+  width: 10px;
+  background-color: $dark;
+  content: "";
+  position: absolute;
+  left: 2rem;
+
+  &:after {
+    width: 2px;
+    height: 10px;
+    background-color: $dark;
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: -0.4rem;
+
+    @include respond(phone) {
+      left: 0.45rem;
+    }
+  }
+}
+
+header {
+  background: $pri;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 99;
+}
+
+.nav {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: auto;
+
+  @include respond(tab) {
+    height: 5rem;
+  }
+
+  @include respond(tab) {
+    flex-direction: row-reverse;
+    max-width: 92%;
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 8rem;
+
+    @include respond(tab) {
+      width: 86%;
+      justify-content: center;
+      margin-right: 6rem;
+    }
+
+    &--link {
+      z-index: 99;
+    }
+
+    & img {
+      width: 14rem;
+      display: flex;
+      align-items: center;
+      z-index: 999;
+
+      @include respond(tab) {
+        width: 10rem;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    position: relative;
+    align-self: stretch;
+
+    @include respond(tab) {
+      display: none;
+    }
+
+    &:hover ~ .nav__bg {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &--sublist {
+      position: absolute;
+      top: 100%;
+      background-color: darken($pri, 5%);
+      height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-shadow: $sha;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      border-bottom-right-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      z-index: 99;
+    }
+  }
+
+  &__item {
+    width: 15rem;
+    cursor: pointer;
+
+    &:hover .nav__list--sublist {
+      visibility: visible;
+      height: 9rem;
+    }
+
+    &:hover .nav__link span:before {
+      transform: rotate(135deg) translate(0rem, -0.7rem);
+    }
+
+    &:hover span:after {
+      transform: rotate(-135deg);
+    }
+
+    &:hover &--subitem {
+      visibility: visible;
+      height: 4rem;
+      opacity: 1;
+    }
+
+    &--subitem {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      color: $ter;
+      transition: all 0.2s ease;
+    }
+
+    &--sublink {
+      display: flex;
+      align-self: stretch;
+      width: 15rem;
+      padding: 1rem 4rem;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $pri;
+        color: $sec;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: darken($pri, 5%);
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+      padding-left: 1rem;
+    }
+
+    & span:before {
+      position: absolute;
+      content: "";
+      top: 44%;
+      height: 2px;
+      width: 8px;
+      transform: rotate(45deg);
+      background-color: $sec;
+      transition: all 0.2s;
+    }
+    & span:after {
+      position: absolute;
+      content: "";
+      bottom: 44%;
+      transform: rotate(135deg);
+      height: 2px;
+      width: 8px;
+      background-color: $sec;
+      transition: all 0.2s;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20rem;
+
+    @include respond(tab) {
+      width: 7rem;
+    }
+
+    @include respond(phone) {
+      justify-content: flex-start;
+    }
+
+    &--search {
+      cursor: pointer;
+      width: 1.9rem;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--bag {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      & img {
+        width: 1.9rem;
+      }
+
+      & span {
+        color: $pri;
+        font-size: 1.2rem;
+        position: absolute;
+        top: -0.7rem;
+        right: -1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $ter;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__bg {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    background: rgba(black, 0.7);
+    width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 10;
+    visibility: hidden;
+  }
+}
+
+//*********** mobile nav ***********
+.mobnav {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  overflow: hidden;
+
+  @include respond(tab) {
+    display: block;
+  }
+
+  &__checkbox {
+    position: absolute;
+    right: 4rem;
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__background {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__background {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: rgba(black, 0.8);
+    transition: 0.6s;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+  //icon
+
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: 2.5rem;
+      height: 0.35rem;
+      border-radius: 3rem;
+      background-color: $sec;
+      display: flex;
+      justify-content: flex-end;
+      top: 1.3rem;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+      width: 1.8rem;
+    }
+  }
+
+  &__button {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 4rem;
+    z-index: 9999;
+    height: 3rem;
+
+    @include respond(tab) {
+      display: block;
+    }
+
+    @include respond(phone) {
+      right: 2rem;
+    }
+  }
+
+  //toggle
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    width: 3rem;
+    transform: rotate(135deg);
+    background-color: $dark;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    width: 3rem;
+    transform: rotate(-135deg);
+    background-color: $dark;
+  }
+
+  &__toggle:checked + &__sublist {
+    height: 10rem;
+    opacity: 1;
+  }
+  &__toggle:checked + &__sublist > &__subitem {
+    height: 5rem;
+    opacity: 1;
+  }
+
+  &__nav {
+    height: 100vh;
+    background: lighten($sec, 10%);
+    overflow-x: scroll;
+    transition: all 0.25s ease-in-out;
+    transform: translateX(100%);
+    float: right;
+    width: 40%;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+
+    @include respond(phone) {
+      width: 70%;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10rem 0;
+
+    @include respond(tab) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    border-top: 1px solid $ter;
+
+    &:not(:first-of-type) {
+      padding: 1.5rem 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 3rem;
+      color: $pri;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid $pri;
+    }
+
+    &--toggle,
+    [id^="drop"] {
+      width: 100%;
+      cursor: pointer;
+      color: $pri;
+      align-items: center;
+      padding: 1.8rem 3rem;
+    }
+
+    [id^="drop"] {
+      display: none;
+      opacity: 0;
+    }
+
+    &--toggle {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+
+      &:hover {
+        background-color: $ter;
+      }
+    }
+  }
+
+  &__sublist {
+    height: 0;
+    opacity: 0;
+    transition: height 0.2s ease-in-out;
+  }
+
+  &__subitem {
+    height: 0;
+    opacity: 0;
+    transition: height 0.2s ease-in-out;
+
+    & a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      color: $pri;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 3rem;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: rgba($pri, 0.2);
+    }
+  }
+
+  &__checkbox:checked ~ &__nav {
+    transform: translateX(0);
+    box-shadow: 0 2rem 3rem rgba(4, 35, 59, 0.835);
+  }
+}

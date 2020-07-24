@@ -1,0 +1,128 @@
+.hero {
+  position: relative;
+  height: calc(100vh - 8rem);
+  background-image: $gra2;
+  overflow: hidden;
+
+  @include respond(tab) {
+    height: 80rem;
+  }
+
+  &__img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38%;
+
+    @include respond(tab) {
+      width: 62%;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__img2 {
+    position: absolute;
+    right: 10rem;
+    width: 40%;
+    top: 20%;
+    animation: productReveal 2s ease-in-out;
+
+    @include respond(laptop) {
+      right: 4rem;
+    }
+
+    @include respond(tab) {
+      display: none;
+    }
+  }
+
+  &__img3 {
+    position: relative;
+    width: 100vw;
+    display: block;
+
+    @include respond(tab) {
+      width: 157vw;
+    }
+
+    @include respond(phone) {
+      width: 200vw;
+    }
+  }
+
+  &__splash {
+    position: absolute;
+    bottom: 0;
+
+    &--title {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+
+      @include respond(tab) {
+        left: 37%;
+      }
+
+      @include respond(phone) {
+        left: 25%;
+      }
+    }
+  }
+
+  &__content {
+    width: 50rem;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include respond(tab) {
+      align-items: flex-end;
+      width: 92%;
+      height: 60rem;
+    }
+
+    @include respond(phone) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--heading {
+      font-size: 8.2rem;
+      margin-top: 15rem;
+      color: $ter;
+      z-index: 5;
+      line-height: 1.05;
+
+      @include respond(tab) {
+        text-align: right;
+        width: 40rem;
+        font-size: 6.2rem;
+        margin-top: 18rem;
+      }
+      @include respond(phone) {
+        text-align: center;
+        font-size: 5rem;
+        width: 30rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    & span {
+      height: 0.2rem;
+      width: 7rem;
+      background-color: $ter;
+      margin: 2rem 0 3.5rem 0;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+}

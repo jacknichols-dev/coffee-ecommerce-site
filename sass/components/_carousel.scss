@@ -1,0 +1,180 @@
+.for_slick_slider {
+  display: flex;
+  height: 55rem;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+
+  @include respond(tab) {
+    height: 38rem;
+  }
+}
+
+.for_slick_slider .items {
+  width: 20rem;
+  margin: 30px;
+}
+
+.for_slick_slider .items img {
+  width: 30rem;
+  margin: auto;
+
+  @include respond(tab) {
+    width: 18rem;
+  }
+}
+
+.slick-center {
+  transform: scale(1.2);
+  transition: all 1s linear;
+}
+
+.items {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__content {
+    opacity: 0;
+    transform: translateY(-4rem);
+    visibility: hidden;
+
+    @include respond(tab) {
+      transform: translateY(-1.5rem);
+    }
+  }
+
+  &__title {
+    color: $pri;
+    font-size: 1.8rem;
+  }
+
+  &__prg {
+    color: $pri;
+    font-size: 1rem;
+    padding: 1rem 0 2rem;
+    width: 20rem;
+    margin: auto;
+    line-height: 1.4;
+  }
+}
+
+.slick-center .items__content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slick-arrow {
+  color: $pri;
+  height: 5rem;
+  width: 5rem;
+  background: none;
+  border: 1px solid $pri;
+  position: absolute;
+  top: 30%;
+  border-radius: 50%;
+  z-index: 9;
+}
+
+.slick-prev {
+  right: 5rem;
+  cursor: pointer;
+
+  @include respond(tab) {
+    right: 2rem;
+  }
+
+  @include respond(phone) {
+    right: 1rem;
+  }
+
+  & span:before {
+    content: "";
+    position: absolute;
+    top: 42%;
+    right: 37%;
+    height: 2px;
+    width: 10px;
+    transform: rotate(45deg);
+    background-color: $pri;
+  }
+  & span:after {
+    content: "";
+    position: absolute;
+    bottom: 42%;
+    right: 37%;
+    height: 2px;
+    width: 10px;
+    transform: rotate(-45deg);
+    background-color: $pri;
+  }
+}
+
+.slick-next {
+  left: 5rem;
+  cursor: pointer;
+
+  @include respond(tab) {
+    left: 2rem;
+  }
+
+  @include respond(phone) {
+    left: 1rem;
+  }
+
+  & span:before {
+    content: "";
+    position: absolute;
+    bottom: 42%;
+    left: 37%;
+    height: 2px;
+    width: 10px;
+    transform: rotate(45deg);
+    background-color: $pri;
+  }
+  & span:after {
+    content: "";
+    position: absolute;
+    top: 42%;
+    left: 37%;
+    height: 2px;
+    width: 10px;
+    transform: rotate(-45deg);
+    background-color: $pri;
+  }
+}
+
+.slick-list,
+.draggable {
+  padding: 2rem !important;
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: -8rem;
+  color: $pri;
+  border: none;
+}
+
+.slick-dots .slick-active {
+  background-color: $ter;
+  color: white;
+}
+
+.slick-dots li {
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+.slick-dots li button {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $pri;
+  outline: none;
+}

@@ -1,0 +1,86 @@
+.machine {
+  position: relative;
+  margin: 10rem 2rem;
+  width: 100%;
+
+  &__one {
+    @include respond(tab) {
+      display: none;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 26rem;
+    background-color: $ter;
+    padding: 5rem;
+
+    @include respond(tab) {
+      padding: 1rem;
+    }
+
+    @include respond(phone) {
+      height: 22rem;
+    }
+
+    &--content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--content2 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+
+      @include respond(phone) {
+        width: 56%;
+      }
+    }
+  }
+
+  &__prg {
+    color: $pri;
+    font-size: 1.4rem;
+    width: 22rem;
+    padding: 2rem 0;
+
+    @include respond(tab) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 37rem;
+    top: -2rem;
+
+    @include respond(phone) {
+      width: 26rem;
+      top: 2rem;
+      left: -3.4rem;
+    }
+
+    &[src*="1.png"] {
+      right: 0;
+      width: 40rem;
+    }
+  }
+}
+
+.purple-box {
+  background-color: rgb(85, 49, 110);
+  align-items: flex-end;
+}
+
+.light-prg {
+  color: $sec;
+}
