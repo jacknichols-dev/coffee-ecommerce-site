@@ -5,6 +5,10 @@
   position: relative;
   justify-content: space-between;
 
+  &:last-of-type {
+    padding-bottom: 10rem;
+  }
+
   @include respond(tab) {
     width: 90%;
     flex-direction: column;
@@ -39,7 +43,7 @@
     &--title {
       width: 20rem;
       position: relative;
-      color: lighten($pri, 30%);
+      color: $pri;
       left: 4rem;
       transform: none;
     }
@@ -48,6 +52,7 @@
       border-bottom: 1px solid $ter;
       padding: 3rem 0;
       width: 85%;
+      color: lighten($pri, 20%);
 
       @include respond(tab) {
         width: 100%;
@@ -57,7 +62,7 @@
     &--price {
       width: 9rem;
       position: relative;
-      color: lighten($pri, 30%);
+      color: $pri;
       padding: 2rem 0;
       left: 4rem;
       transform: none;

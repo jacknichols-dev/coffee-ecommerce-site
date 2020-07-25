@@ -12,6 +12,7 @@
 
     @include respond(tab) {
       width: 95%;
+      margin-top: 17rem;
     }
 
     @include respond(phone) {

@@ -91,7 +91,7 @@ header {
     &--sublist {
       position: absolute;
       top: 100%;
-      background-color: darken($pri, 5%);
+      background-color: $pri;
       height: 0;
       display: flex;
       flex-direction: column;
@@ -111,15 +111,17 @@ header {
 
     &:hover .nav__list--sublist {
       visibility: visible;
-      height: 9rem;
+      height: 10rem;
     }
 
     &:hover .nav__link span:before {
       transform: rotate(135deg) translate(0rem, -0.7rem);
+      background-color: $pri;
     }
 
     &:hover span:after {
       transform: rotate(-135deg);
+      background-color: $pri;
     }
 
     &:hover &--subitem {
@@ -144,14 +146,15 @@ header {
       transition: all 0.2s;
 
       &:hover {
-        background-color: $pri;
-        color: $sec;
+        background-color: $ter;
+        color: $pri;
       }
     }
 
     &:hover,
     &:active {
-      background-color: darken($pri, 5%);
+      background-color: $ter;
+      color: $pri;
     }
   }
 
@@ -241,7 +244,7 @@ header {
     position: fixed;
     top: 6rem;
     left: 0;
-    background: rgba(black, 0.7);
+    background: rgba(black, 0.4);
     width: 100%;
     min-height: 100%;
     opacity: 0;

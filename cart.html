@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/coffeetime-favicon.ico"
+      sizes="16x16"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+
+    <title>Coffee Time - your cart</title>
+  </head>
+
+  <body>
+    <!--header-->
+    <div id="header"></div>
+
+    <!--main-->
+    <main class="cart">
+      <section class="coffee__header header">
+        <h1 class="page-title section-title">Your Cart</h1>
+      </section>
+
+      <!--cart item-->
+      <div class="cart__item">
+        <container class="cart__item--container">
+          <img
+            src="assets/imgs/coffee-product-image.png"
+            alt="#"
+            class="cart__item--img"
+          />
+
+          <h3 class="cart__item--title">item title</h3>
+          <h4 class="cart__item--price">£ 9.99</h4>
+        </container>
+        <div class="cart__item--quantity">
+          <h3>quantity</h3>
+
+          <span><small>1</small></span>
+        </div>
+        <div class="cart__item--remove">
+          <h3>remove item</h3>
+          <img src="assets/icons/bin.svg" alt="bin icon" />
+        </div>
+      </div>
+      <!--cart item end-->
+    </main>
+
+    <!--footer-->
+    <div id="footer"></div>
+
+    <!--scripts-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

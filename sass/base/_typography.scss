@@ -9,10 +9,13 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: $font2;
   letter-spacing: 0.05rem;
+}
+
+h3 {
+  font-family: $font2;
 }
 
 ::selection {

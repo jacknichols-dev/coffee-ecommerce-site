@@ -156,6 +156,12 @@
   bottom: -8rem;
   color: $pri;
   border: none;
+  width: 100%;
+  justify-content: center;
+
+  @include respond(tab) {
+    transform: translateY(6rem);
+  }
 }
 
 .slick-dots .slick-active {
