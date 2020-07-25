@@ -5,19 +5,3 @@
   width: 100vw;
   top: 0;
 }
-
-.page-title {
-  font-size: 6rem;
-  color: $sec;
-  text-shadow: none;
-  max-width: 100%;
-
-  @include respond(tab) {
-    font-size: 4rem;
-  }
-
-  &:before,
-  &:after {
-    background-color: $sec;
-  }
-}

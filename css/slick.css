@@ -29,8 +29,7 @@
   outline: none;
 }
 .slick-list.draggable {
-  cursor: pointer;
-  cursor: hand;
+  cursor: grab;
 }
 
 .slick-slider .slick-track,

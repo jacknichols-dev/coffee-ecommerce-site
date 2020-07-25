@@ -5,7 +5,7 @@ button {
 }
 
 .btn-main {
-  padding: 1.5rem 2.3rem;
+  padding: 1.3rem 1.8rem;
   width: 17rem;
   text-transform: uppercase;
   font-family: inherit;
@@ -34,6 +34,16 @@ button {
 }
 
 .addToCart {
+  background: $green;
+  color: white;
+}
+
+.remove-all-btn {
+  background: orangered;
+  color: white;
+}
+
+.checkout-btn {
   background: $green;
   color: white;
 }

@@ -13,6 +13,10 @@
     width: 90%;
     flex-direction: column;
     align-items: center;
+
+    &:not(:last-of-type) {
+      padding-bottom: 3rem;
+    }
   }
 
   &__images {
@@ -40,12 +44,25 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    @include respond(tab) {
+      width: 100%;
+      margin: auto;
+      align-items: center;
+    }
+
     &--title {
       width: 20rem;
       position: relative;
       color: $pri;
       left: 4rem;
       transform: none;
+
+      @include respond(tab) {
+        position: absolute;
+        top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     & p {
@@ -55,7 +72,8 @@
       color: lighten($pri, 20%);
 
       @include respond(tab) {
-        width: 100%;
+        padding: 7rem 0 2rem 0;
+        text-align: center;
       }
     }
 
@@ -66,6 +84,10 @@
       padding: 2rem 0;
       left: 4rem;
       transform: none;
+
+      @include respond(tab) {
+        left: 0;
+      }
     }
   }
 }

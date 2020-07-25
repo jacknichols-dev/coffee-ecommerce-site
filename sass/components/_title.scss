@@ -1,5 +1,5 @@
 .header {
-  height: 23rem;
+  height: 20rem;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -9,7 +9,11 @@
 
   @include respond(tab) {
     margin-top: 5rem;
-    height: 18rem;
+    height: 16rem;
+  }
+
+  @include respond(phone) {
+    height: 12rem;
   }
 }
 
@@ -49,6 +53,26 @@
   &:before {
     background-color: $sec;
   }
+  &:after {
+    background-color: $sec;
+  }
+}
+
+.page-title {
+  font-size: 5rem;
+  color: $sec;
+  text-shadow: none;
+  max-width: 100%;
+
+  @include respond(tab) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+
+  &:before,
   &:after {
     background-color: $sec;
   }

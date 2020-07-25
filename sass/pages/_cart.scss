@@ -11,14 +11,17 @@
     margin: 5rem auto;
     border-bottom: 1px solid $ter;
     padding-bottom: 5rem;
+    font-size: 1.4rem;
 
     &--img {
       width: 20%;
     }
 
     &--container {
+      padding: 1.5rem;
+      border: 1px solid $sec;
       width: 30rem;
-      height: 5rem;
+      height: 15rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,17 +35,20 @@
     }
 
     &--quantity {
-      width: 30rem;
-      height: 10rem;
+      padding: 1.5rem;
+      border: 1px solid $sec;
+      width: 20%;
+      height: 15rem;
       display: flex;
       align-items: center;
       flex-direction: column;
-      justify-content: space-between;
 
       & span {
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: center;
+        height: 100%;
 
         &:after,
         &:before {
@@ -54,28 +60,54 @@
         }
 
         &:after {
-          border-right: 2px solid brown;
-          border-bottom: 2px solid brown;
+          border-right: 3px solid $green;
+          border-bottom: 3px solid $green;
         }
 
         &:before {
-          border-left: 2px solid brown;
-          border-top: 2px solid brown;
+          border-left: 3px solid $green;
+          border-top: 3px solid $green;
         }
       }
     }
 
     &--remove {
-      width: 30rem;
-      height: 10rem;
+      padding: 1.5rem;
+      border: 1px solid $sec;
+      width: 20%;
+      height: 15rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
+
       & img {
         width: 5rem;
         cursor: pointer;
+        height: 100%;
       }
+    }
+  }
+
+  &__toolbar {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--total {
+      margin-bottom: 5rem;
+
+      & small {
+        color: lighten($pri, 20%);
+      }
+    }
+
+    &--btns {
+      width: 38rem;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

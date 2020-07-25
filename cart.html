@@ -14,7 +14,6 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
-
     <title>Coffee Time - your cart</title>
   </head>
 
@@ -29,28 +28,50 @@
       </section>
 
       <!--cart item-->
-      <div class="cart__item">
-        <container class="cart__item--container">
-          <img
-            src="assets/imgs/coffee-product-image.png"
-            alt="#"
-            class="cart__item--img"
-          />
+      <container class="cart__items">
+        <div class="cart__item">
+          <container class="cart__item--container">
+            <img
+              src="assets/imgs/coffee-product-image.png"
+              alt="#"
+              class="cart__item--img"
+            />
 
-          <h3 class="cart__item--title">item title</h3>
-          <h4 class="cart__item--price">£ 9.99</h4>
-        </container>
-        <div class="cart__item--quantity">
-          <h3>quantity</h3>
+            <h4 class="cart__item--title">item title</h4>
+            <h4 class="cart__item--price">£ 9.99</h4>
+          </container>
+          <div class="cart__item--quantity">
+            <h4>quantity</h4>
 
-          <span><small>1</small></span>
+            <span
+              ><small><strong>2</strong></small></span
+            >
+          </div>
+          <div class="cart__item--remove">
+            <h4>remove item</h4>
+            <img src="assets/icons/bin.svg" alt="bin icon" />
+          </div>
         </div>
-        <div class="cart__item--remove">
-          <h3>remove item</h3>
-          <img src="assets/icons/bin.svg" alt="bin icon" />
+        <!--cart item end-->
+      </container>
+      <div class="cart__toolbar">
+        <p class="cart__toolbar--total" style="text-align: center;">
+          Your total is: <br /><small>£ </small
+          ><strong
+            ><span class="cart-total" style="font-size: larger; color: green;"
+              >9.99</span
+            ></strong
+          >
+        </p>
+        <div class="cart__toolbar--btns">
+          <button class="checkout-btn btn-main">
+            checkout
+          </button>
+          <button class="remove-all-btn btn-main">
+            clear cart
+          </button>
         </div>
       </div>
-      <!--cart item end-->
     </main>
 
     <!--footer-->

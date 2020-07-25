@@ -19,7 +19,7 @@ $(function () {
     speed: 1000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 850,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -34,9 +34,42 @@ $(function () {
           slidesToScroll: 1,
         },
       },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ],
   });
 });
+
+//*************************** CART LOGIC ***************************//
+
+/* --------------- variables ---------------- */
+//bag icon number
+const bagNumber = document.querySelector(".bag-number");
+//clear cart
+const ClearCartBtn = document.querySelector(".remove-all-btn");
+//clear item
+const removeItemBtn = document.querySelector(".cart__item--remove img");
+//cart total
+const cartTotal = document.querySelector(".cart-total");
+//cart item
+const cartItemDOM = document.querySelector(".cart__item");
+//cart items
+const cartContent = document.querySelector(".cart__items");
+//add product btn
+const addProductBtn = document.querySelector(".addToCart");
+//cart
+let cart = [];
+
+/* --------------- Classes ---------------- */
+//getting the products
+class Products {}
+//display products
+class UI {}
+//local storage
+class Storage {}
+/* --------------- Event listeners ---------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const ui = new UI();
+  const products = new Products();
+});
+
+/* --------------- variables ---------------- */
+/* --------------- variables ---------------- */
