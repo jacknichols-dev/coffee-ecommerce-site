@@ -438,7 +438,8 @@ button {
           transform: translateX(-50%); } }
       @media only screen and (max-width: 30em) {
         .product__info--title {
-          font-size: 1.8rem; } }
+          font-size: 1.8rem;
+          text-align: center; } }
     .product__info p {
       border-bottom: 1px solid #f4d37f;
       padding: 3rem 0;
@@ -449,7 +450,7 @@ button {
           padding: 7rem 0 2rem 0;
           text-align: center; } }
     .product__info--price {
-      width: 9rem;
+      min-width: 9rem;
       position: relative;
       color: #340057;
       padding: 2rem 0;
@@ -457,7 +458,12 @@ button {
       transform: none; }
       @media only screen and (max-width: 64em) {
         .product__info--price {
-          left: 0; } }
+          left: 0;
+          min-width: 15%;
+          text-align: center; } }
+      @media only screen and (max-width: 30em) {
+        .product__info--price {
+          width: 40%; } }
 
 .footer {
   position: relative;

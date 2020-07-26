@@ -66,6 +66,7 @@
 
       @include respond(phone) {
         font-size: 1.8rem;
+        text-align: center;
       }
     }
 
@@ -82,7 +83,7 @@
     }
 
     &--price {
-      width: 9rem;
+      min-width: 9rem;
       position: relative;
       color: $pri;
       padding: 2rem 0;
@@ -91,6 +92,12 @@
 
       @include respond(tab) {
         left: 0;
+        min-width: 15%;
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        width: 40%;
       }
     }
   }
