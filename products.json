@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Arabica Coffee Beans",
+        "price": 8.99,
+        "image": {
+          "fields": {
+            "file": { "url": "assets/imgs/coffee-product-image.png" }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "Robusta Coffee Beans",
+        "price": 9.99,
+        "image": {
+          "fields": {
+            "file": { "url": "assets/imgs/coffee-product-image.png" }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Liberica Coffee Beans",
+        "price": 11.99,
+        "image": {
+          "fields": {
+            "file": { "url": "assets/imgs/coffee-product-image.png" }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "Excelsa Coffee Beans",
+        "price": 10.99,
+        "image": {
+          "fields": {
+            "file": { "url": "assets/imgs/coffee-product-image.png" }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Decaf Coffee Beans",
+        "price": 7.99,
+        "image": {
+          "fields": {
+            "file": { "url": "assets/imgs/coffee-product-image.png" }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Arabica/Robusta Coffee Beans",
+        "price": 9.99,
+        "image": {
+          "fields": {
+            "file": { "url": "assets/imgs/coffee-product-image.png" }
+          }
+        }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "Milano Coffee Machine",
+        "price": 99.99,
+        "image": {
+          "fields": { "file": { "url": "assets/imgs/coffee-machine.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Nexus Coffee Machine",
+        "price": 149.99,
+        "image": {
+          "fields": { "file": { "url": "assets/imgs/coffee-machine1.png" } }
+        }
+      }
+    }
+  ]
+}

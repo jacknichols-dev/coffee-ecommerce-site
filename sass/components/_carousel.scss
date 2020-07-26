@@ -16,7 +16,7 @@
 }
 
 .for_slick_slider .items img {
-  width: 30rem;
+  width: 40rem;
   margin: auto;
 
   @include respond(tab) {
@@ -154,7 +154,7 @@
 .slick-dots {
   display: flex;
   position: absolute;
-  bottom: -8rem;
+  bottom: -11rem;
   color: $pri;
   border: none;
   width: 100%;
@@ -162,6 +162,7 @@
 
   @include respond(tab) {
     transform: translateY(6rem);
+    bottom: -4rem;
   }
 }
 
