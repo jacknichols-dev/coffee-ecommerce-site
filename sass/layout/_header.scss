@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 10rem);
   background-image: $gra2;
   overflow: hidden;
 
@@ -15,11 +15,12 @@
     width: 38%;
 
     @include respond(tab) {
-      width: 62%;
+      width: 70%;
+      top: 5rem;
     }
 
     @include respond(phone) {
-      display: none;
+      width: 85%;
     }
   }
 
@@ -27,7 +28,7 @@
     position: absolute;
     right: 10rem;
     width: 40%;
-    top: 20%;
+    top: 25%;
     animation: productReveal 2s ease-in-out;
 
     @include respond(laptop) {
@@ -46,6 +47,7 @@
 
     @include respond(tab) {
       width: 157vw;
+      transform: translateX(-10%);
     }
 
     @include respond(phone) {
@@ -56,18 +58,32 @@
   &__splash {
     position: absolute;
     bottom: 0;
+    z-index: 0;
 
     &--title {
       position: absolute;
-      bottom: 10%;
+      bottom: 13%;
       left: 50%;
+      color: $sec;
+      text-shadow: 0 -0.3rem 1rem rgba(black, 0.5);
+
+      &:after,
+      &:before {
+        background-color: $sec;
+      }
+
+      @include respond(laptop) {
+        bottom: 11%;
+      }
 
       @include respond(tab) {
-        left: 37%;
+        left: 32%;
       }
 
       @include respond(phone) {
         left: 25%;
+        letter-spacing: none;
+        font-size: 2rem;
       }
     }
   }
@@ -76,11 +92,11 @@
     width: 50rem;
     height: 100%;
     display: flex;
-    text-align: center;
+    text-align: left;
     margin: auto;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
     @include respond(tab) {
       align-items: flex-end;
@@ -94,8 +110,8 @@
     }
 
     &--heading {
-      font-size: 8.2rem;
-      margin-top: 15rem;
+      font-size: 6rem;
+      margin: 30rem 10rem 0 0;
       color: $ter;
       z-index: 5;
       line-height: 1.05;
@@ -103,12 +119,12 @@
       @include respond(tab) {
         text-align: right;
         width: 40rem;
-        font-size: 6.2rem;
-        margin-top: 18rem;
+        margin: 25rem 0 0 0;
+        font-size: 5.3rem;
       }
       @include respond(phone) {
         text-align: center;
-        font-size: 5rem;
+        font-size: 4.7rem;
         width: 30rem;
         padding-bottom: 2rem;
       }

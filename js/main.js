@@ -53,6 +53,8 @@ const cartTotal = document.querySelector(".cart-total");
 const cartItemDOM = document.querySelector(".cart__item");
 //cart items
 const cartContent = document.querySelector(".cart__items");
+//product items
+const productsDOM = document.querySelector(".products-container");
 //add product btn
 const addProductBtn = document.querySelector(".addToCart");
 //cart
@@ -60,15 +62,64 @@ let cart = [];
 
 /* --------------- Classes ---------------- */
 //getting the products
-class Products {}
+class Products {
+  async getProducts() {
+    try {
+      let result = await fetch("products.json");
+      let data = await result.json();
+      let products = data.items;
+      products = products.map((item) => {
+        const { title, price } = item.fields;
+        const { id } = item.sys;
+        const img = item.fields.image.fields.file.url;
+        return { title, price, id, img };
+      });
+      return products;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
 //display products
-class UI {}
+class UI {
+  displayProducts(products) {
+    let result = "";
+    products.forEach((product) => {
+      result += `
+      <!--product-->
+      <section class="product">
+        <container class="product__images">
+          <img
+            src=${product.img}
+            alt="product image"
+            class="product__images--main"
+          />
+        </container>
+        <container class="product__info">
+          <h2 class="product__info--title section-title">${product.title}</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+            aliquam, omnis, consequatur enim voluptas optio corrupti excepturi
+            quos, doloribus obcaecati tempore quam!
+          </p>
+          <h2 class="product__info--price section-title">£ ${product.price}</h2>
+          <button class="addToCart btn-main" data-id=${product.id}>Add to cart</button>
+        </container>
+      </section>
+      <!--product end-->
+      `;
+    });
+    productsDOM.innerHTML = result;
+  }
+}
 //local storage
 class Storage {}
 /* --------------- Event listeners ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const products = new Products();
+  // get all products
+  products.getProducts().then((products) => ui.displayProducts(products));
 });
 
 /* --------------- variables ---------------- */

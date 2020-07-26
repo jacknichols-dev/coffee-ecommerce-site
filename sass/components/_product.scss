@@ -46,8 +46,12 @@
       align-items: center;
     }
 
+    @include respond(phone) {
+      line-height: 1.4;
+    }
+
     &--title {
-      width: 20rem;
+      max-width: 100%;
       position: relative;
       color: $pri;
       left: 4rem;
@@ -58,6 +62,10 @@
         top: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
+      }
+
+      @include respond(phone) {
+        font-size: 1.8rem;
       }
     }
 

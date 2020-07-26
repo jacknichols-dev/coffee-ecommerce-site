@@ -3,11 +3,11 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "Arabica Coffee Beans",
+        "title": "Arabica Coffee",
         "price": 8.99,
         "image": {
           "fields": {
-            "file": { "url": "assets/imgs/coffee-product-image.png" }
+            "file": { "url": "assets/imgs/coffee-arabica.png" }
           }
         }
       }
@@ -15,11 +15,11 @@
     {
       "sys": { "id": "2" },
       "fields": {
-        "title": "Robusta Coffee Beans",
+        "title": "Robusta Coffee",
         "price": 9.99,
         "image": {
           "fields": {
-            "file": { "url": "assets/imgs/coffee-product-image.png" }
+            "file": { "url": "assets/imgs/coffee-robusta.png" }
           }
         }
       }
@@ -27,11 +27,11 @@
     {
       "sys": { "id": "3" },
       "fields": {
-        "title": "Liberica Coffee Beans",
+        "title": "Liberica Coffee",
         "price": 11.99,
         "image": {
           "fields": {
-            "file": { "url": "assets/imgs/coffee-product-image.png" }
+            "file": { "url": "assets/imgs/coffee-liberica.png" }
           }
         }
       }
@@ -39,11 +39,11 @@
     {
       "sys": { "id": "4" },
       "fields": {
-        "title": "Excelsa Coffee Beans",
+        "title": "Excelsa Coffee",
         "price": 10.99,
         "image": {
           "fields": {
-            "file": { "url": "assets/imgs/coffee-product-image.png" }
+            "file": { "url": "assets/imgs/coffee-excelsa.png" }
           }
         }
       }
@@ -51,11 +51,11 @@
     {
       "sys": { "id": "5" },
       "fields": {
-        "title": "Decaf Coffee Beans",
+        "title": "Decaf Coffee",
         "price": 7.99,
         "image": {
           "fields": {
-            "file": { "url": "assets/imgs/coffee-product-image.png" }
+            "file": { "url": "assets/imgs/coffee-decaf.png" }
           }
         }
       }
@@ -63,11 +63,11 @@
     {
       "sys": { "id": "6" },
       "fields": {
-        "title": "Arabica/Robusta Coffee Beans",
+        "title": "Arabica/Robusta Coffee",
         "price": 9.99,
         "image": {
           "fields": {
-            "file": { "url": "assets/imgs/coffee-product-image.png" }
+            "file": { "url": "assets/imgs/coffee-blend.png" }
           }
         }
       }
@@ -75,7 +75,7 @@
     {
       "sys": { "id": "7" },
       "fields": {
-        "title": "Milano Coffee Machine",
+        "title": "Milano Machine",
         "price": 99.99,
         "image": {
           "fields": { "file": { "url": "assets/imgs/coffee-machine.png" } }
@@ -85,7 +85,7 @@
     {
       "sys": { "id": "8" },
       "fields": {
-        "title": "Nexus Coffee Machine",
+        "title": "Nexus Machine",
         "price": 149.99,
         "image": {
           "fields": { "file": { "url": "assets/imgs/coffee-machine1.png" } }

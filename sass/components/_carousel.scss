@@ -1,6 +1,6 @@
 .for_slick_slider {
   display: flex;
-  height: 55rem;
+  height: 58rem;
   align-items: center;
   position: relative;
   justify-content: space-around;
@@ -18,6 +18,7 @@
 .for_slick_slider .items img {
   width: 40rem;
   margin: auto;
+  z-index: 5;
 
   @include respond(tab) {
     width: 18rem;
@@ -25,7 +26,7 @@
 }
 
 .slick-center {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: all 1s linear;
 }
 
