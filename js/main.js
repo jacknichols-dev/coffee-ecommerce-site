@@ -1,8 +1,12 @@
-//HTML file includes
-$(document).ready(function () {
-  $("#header").load("header.html");
-  $("#footer").load("footer.html");
-});
+//nav logic
+const navItem = document.querySelectorAll(".mobnav__item--toggle");
+const navLength = navItem.length;
+
+for (let i = 0; i < navLength; i++) {
+  navItem[i].addEventListener("click", () => {
+    navItem[i].classList.toggle("active");
+  });
+}
 
 //product carousel
 $(function () {
@@ -11,7 +15,7 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     dots: true,
     centerMode: true,
@@ -38,11 +42,12 @@ $(function () {
   });
 });
 
-//*************************** CART LOGIC ***************************//
+//*************************** CART & PRODUCT LOGIC ***************************//
 
 /* --------------- variables ---------------- */
 //bag icon number
 const bagNumber = document.querySelector(".bag-number");
+
 //clear cart
 const ClearCartBtn = document.querySelector(".remove-all-btn");
 //clear item
@@ -111,16 +116,45 @@ class UI {
     });
     productsDOM.innerHTML = result;
   }
+  getBagBtns() {
+    const bagBtns = [...document.querySelectorAll(".addToCart")];
+    bagBtns.forEach((btn) => {
+      let btnId = btn.dataset.id;
+      let inBag = cart.find((item) => item.id === id);
+      if (inBag) {
+        btn.target.innerHTML = "<span>item added &#10003;</span>";
+        btn.disabled = true;
+        btn.style.background = "rgb(43, 153, 24)";
+      } else {
+        btn.addEventListener("click", (e) => {
+          e.target.innerHTML = "<span>item added &#10003;</span>";
+          e.target.disabled = true;
+          e.target.style.background = "rgb(43, 153, 24)";
+        });
+      }
+    });
+  }
 }
 //local storage
-class Storage {}
+class Storage {
+  static saveProducts(products) {
+    localStorage.setItem("products", JSON.stringify(products));
+  }
+}
+
 /* --------------- Event listeners ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const products = new Products();
-  // get all products
-  products.getProducts().then((products) => ui.displayProducts(products));
-});
 
-/* --------------- variables ---------------- */
-/* --------------- variables ---------------- */
+  // get all products
+  products
+    .getProducts()
+    .then((products) => {
+      ui.displayProducts(products);
+      Storage.saveProducts(products);
+    })
+    .then(() => {
+      ui.getBagBtns();
+    });
+});

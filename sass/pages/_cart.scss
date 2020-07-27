@@ -7,9 +7,10 @@
     width: 80%;
     display: flex;
     align-items: center;
+
     justify-content: center;
     margin: 5rem auto;
-    border-bottom: 1px solid $ter;
+    border-bottom: 1px solid $light;
     padding-bottom: 5rem;
     font-size: 1.4rem;
 
@@ -20,8 +21,10 @@
     &--container {
       padding: 1.5rem 3rem;
       border: 1px solid $sec;
+      box-shadow: $sha;
       width: 45rem;
       margin: 0 2rem;
+      background-color: $light;
       height: 15rem;
       display: flex;
       justify-content: space-between;
@@ -40,9 +43,11 @@
       border: 1px solid $sec;
       width: 15%;
       height: 15rem;
+      box-shadow: $sha;
       display: flex;
       align-items: center;
       flex-direction: column;
+      background-color: $light;
 
       & span {
         display: flex;
@@ -76,6 +81,8 @@
       padding: 1.5rem;
       border: 1px solid $sec;
       width: 15%;
+      background-color: $light;
+      box-shadow: $sha;
       margin: 0 2rem;
       height: 15rem;
       display: flex;

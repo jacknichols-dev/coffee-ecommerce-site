@@ -1,7 +1,8 @@
-$pri: #340057;
+$pri: #1f3c50;
 $sec: #f9f5c0;
 $ter: #f4d37f;
-$dark: #2d1600;
+$dark: #2a2520;
+$light: rgb(250, 248, 244);
 $green: rgb(43, 153, 24);
 $gra1: linear-gradient(to right bottom, #f4d37f, #f9f5c0);
 $gra2: linear-gradient(to left top, #4d2a00, 20%, #000000);
@@ -11,4 +12,4 @@ $font2: "Yeseva One", cursive;
 
 //shadows
 
-$sha: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
+$sha: 0 0.2rem 1rem 0.5rem rgba(0, 0, 0, 0.1);

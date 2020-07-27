@@ -1,32 +1,32 @@
 .product {
   width: 80%;
-  margin: 8rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   display: flex;
   position: relative;
   justify-content: space-between;
+  padding: 3rem 0;
 
   &:last-of-type {
-    padding-bottom: 10rem;
+    margin-bottom: 10rem;
   }
 
   @include respond(tab) {
     width: 90%;
     flex-direction: column;
     align-items: center;
-
-    &:not(:last-of-type) {
-      padding-bottom: 3rem;
-    }
+    border: 1px solid $pri;
   }
 
   &__images {
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
 
     & img {
       border: 1px solid $ter;
       padding-top: 3rem;
+      border-radius: 3rem;
+      background-color: $light;
     }
   }
 
@@ -34,7 +34,7 @@
     width: 50%;
     position: relative;
     color: $pri;
-    margin: 8rem 0 8rem 8rem;
+    margin: 10rem 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

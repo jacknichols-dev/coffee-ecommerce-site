@@ -69,9 +69,14 @@
       left: -3.4rem;
     }
 
+    &:not(:first-child) {
+      transform: translateX(-7rem);
+    }
+
     &[src*="1.png"] {
       right: 0;
       width: 40rem;
+      transform: translateX(8rem);
     }
   }
 }

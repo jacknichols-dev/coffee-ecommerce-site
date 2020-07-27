@@ -10,9 +10,9 @@
 
   &__img1 {
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
-    width: 38%;
+    width: 45%;
 
     @include respond(tab) {
       width: 70%;
@@ -27,9 +27,10 @@
   &__img2 {
     position: absolute;
     right: 10rem;
-    width: 40%;
-    top: 25%;
-    animation: productReveal 2s ease-in-out;
+    width: 45%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: productReveal 2s;
 
     @include respond(laptop) {
       right: 4rem;
@@ -111,7 +112,7 @@
 
     &--heading {
       font-size: 6rem;
-      margin: 30rem 10rem 0 0;
+      margin: 30rem 20rem 0 0;
       color: $ter;
       z-index: 5;
       line-height: 1.05;
